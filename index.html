@@ -47,6 +47,39 @@ html,body{margin:0;max-width:100%;overflow-x:hidden}body{font-family:Arial,Helve
 @media(max-width:760px){.cards{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}
 @media(max-width:560px){.wrap{padding:14px 10px}.hero h1{font-size:34px}.cards{grid-template-columns:1fr}.pillar-head{align-items:flex-start;flex-wrap:wrap}.strap{margin-left:68px;text-align:left;width:100%}.value{font-size:27px}}
 </style>
+
+<style id="embed-width-fix">
+html, body, #app, .wrap, .hero, .pillar, .pillar-head, .cards, .card, .charts, .chart-card, .source-box, .sources {
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+* {
+  min-width: 0;
+}
+img, svg, canvas {
+  max-width: 100% !important;
+}
+.line-svg {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.bar-chart, .trade-bars {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+.source-box, .sources, .tag, .strap, .label, .period {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.cards, .charts {
+  overflow: hidden;
+}
+body {
+  overflow-x: hidden !important;
+}
+</style>
+
 </head>
 <body>
 <div id="app" class="wrap">Loading…</div>
