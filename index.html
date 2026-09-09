@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Tonga — Key Statistics</title>
+<style>
+:root{
+ --ink:#0b1b4c;--muted:#60708e;--line:#dce7f2;--card:#fff;
+ --social:#eaf4ff;--economic:#e9f5ff;--env:#e8f8f5;--blue:#0d6fe8
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+.wrap{max-width:1460px;margin:auto;padding:20px 24px 34px}
+.hero{display:grid;grid-template-columns:1.4fr .75fr;gap:18px;align-items:stretch;margin-bottom:18px}
+.hero h1{font-size:48px;line-height:1.05;margin:8px 0 12px;color:#111f5a}
+.hero p{font-size:18px;line-height:1.45;margin:0;color:#334a77;max-width:850px}
+.source-box{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:#fbfdff}
+.source-box strong{display:block;margin-bottom:4px}
+.pillar{border-radius:16px;padding:12px;margin:16px 0}
+.social{background:var(--social)} .economic{background:var(--economic)} .environment{background:var(--env)}
+.pillar-head{display:flex;align-items:center;gap:14px;padding:2px 4px 10px}
+.badge{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;font-weight:bold;background:linear-gradient(135deg,#0878ef,#0a4da4)}
+.environment .badge{background:linear-gradient(135deg,#16a995,#087565)}
+.pillar-head h2{font-size:29px;margin:0}
+.tag{font-size:15px;color:#335987}
+.strap{margin-left:auto;font-size:15px;color:#315a88;text-align:right}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.card{background:#fff;border:1px solid rgba(14,76,145,.08);border-radius:11px;min-height:128px;padding:16px;display:flex;gap:13px;align-items:flex-start;box-shadow:0 1px 0 rgba(10,36,95,.03)}
+.icon{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#e8f3ff;font-size:25px;flex:0 0 auto}
+.environment .icon{background:#dff3ee}
+.label{font-size:14px;font-weight:700;line-height:1.25;margin-bottom:5px}
+.value{font-size:30px;font-weight:800;line-height:1.05;color:#0c1b57;white-space:nowrap}
+.period{font-size:14px;color:var(--muted);margin-top:7px;line-height:1.25}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.chart-card{background:#fff;border:1px solid rgba(14,76,145,.08);border-radius:11px;padding:16px 16px 12px}
+.chart-card h3{margin:0 0 4px;font-size:19px}.chart-sub{font-size:14px;color:var(--muted);margin-bottom:12px}
+.bar-chart{height:260px;display:flex;align-items:flex-end;gap:18px;padding:12px 12px 30px;border-left:1px solid #cdd9e8;border-bottom:1px solid #cdd9e8}
+.bar-col{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative;min-width:0}
+.bar{width:68%;background:linear-gradient(180deg,#62b5f7,#1278df);border-radius:4px 4px 0 0;position:relative}
+.bar span{position:absolute;left:50%;transform:translateX(-50%);top:-22px;font-size:12px;font-weight:700;color:#0b5dcc;white-space:nowrap}
+.xlab{position:absolute;bottom:-25px;font-size:11px;color:#516787;text-align:center;width:100%}
+.line-svg{width:100%;height:280px;display:block}
+.note{background:rgba(255,255,255,.72);border-radius:11px;padding:16px;margin-top:12px;font-size:14px;line-height:1.45;color:#365270}
+.sources{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding:16px 4px 0;font-size:13px;color:#4e6380;line-height:1.45}
+.error{padding:20px;border:1px solid #e0a5a5;background:#fff6f6;border-radius:10px;color:#7b1e1e}
+@media(max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}
+@media(max-width:680px){.wrap{padding:14px 10px}.hero h1{font-size:34px}.cards{grid-template-columns:1fr}.pillar-head{align-items:flex-start;flex-wrap:wrap}.strap{margin-left:68px;text-align:left;width:100%}.value{font-size:27px}}
+</style>
+</head>
+<body>
+<div id="app" class="wrap">Loading…</div>
+<script>
+const DATA_URL = new URLSearchParams(location.search).get("data") || "data.json";
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+
+function cards(items){
+  return `<div class="cards">${items.map(x=>`
+    <div class="card"><div class="icon">${esc(x.icon)}</div><div>
+      <div class="label">${esc(x.label)}</div>
+      <div class="value">${esc(x.value)}</div>
+      <div class="period">${esc(x.period)}</div>
+    </div></div>`).join("")}</div>`;
+}
+
+function barChart(chart){
+  const max = Math.max(...chart.series.map(d=>d.value));
+  return `<div class="chart-card"><h3>${esc(chart.title)}</h3><div class="chart-sub">${esc(chart.subtitle)}</div>
+  <div class="bar-chart">${chart.series.map(d=>`
+    <div class="bar-col">
+      <div class="bar" style="height:${(d.value/max*100).toFixed(2)}%"><span>${esc(d.display ?? d.value.toLocaleString())}</span></div>
+      <div class="xlab">${esc(d.label)}</div>
+    </div>`).join("")}</div></div>`;
+}
+
+function lineChart(chart){
+  const w=760,h=280,left=55,right=25,top=30,bottom=45;
+  const max=Math.max(...chart.series.map(d=>d.value));
+  const min=0;
+  const usableW=w-left-right, usableH=h-top-bottom;
+  const pts=chart.series.map((d,i)=>{
+    const x=left+(chart.series.length===1?0:i*(usableW/(chart.series.length-1)));
+    const y=top+usableH*(1-(d.value-min)/(max-min || 1));
+    return {x,y,...d};
+  });
+  return `<div class="chart-card"><h3>${esc(chart.title)}</h3><div class="chart-sub">${esc(chart.subtitle)}</div>
+    <svg class="line-svg" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+      <line x1="${left}" y1="${h-bottom}" x2="${w-right}" y2="${h-bottom}" stroke="#cdd9e8"/>
+      <line x1="${left}" y1="${top}" x2="${left}" y2="${h-bottom}" stroke="#cdd9e8"/>
+      <polyline points="${pts.map(p=>`${p.x},${p.y}`).join(" ")}" fill="none" stroke="#0d6fe8" stroke-width="4"/>
+      ${pts.map(p=>`<circle cx="${p.x}" cy="${p.y}" r="5" fill="#0d6fe8"/>
+        <text x="${p.x}" y="${Math.max(14,p.y-10)}" font-size="11" fill="#0b5dcc" font-weight="700" text-anchor="middle">${esc(p.value.toLocaleString())}</text>
+        <text x="${p.x}" y="${h-18}" font-size="11" fill="#516787" text-anchor="middle">${esc(p.label)}</text>`).join("")}
+    </svg></div>`;
+}
+
+function pillar(cls,title,tag,strap,content){
+  return `<section class="pillar ${cls}">
+    <div class="pillar-head"><div class="badge">${cls==="environment"?"❧":"▥"}</div>
+    <h2>${esc(title)}</h2><div class="tag">${esc(tag)}</div><div class="strap">${esc(strap)}</div></div>
+    ${content}
+  </section>`;
+}
+
+async function load(){
+  try{
+    const res=await fetch(DATA_URL,{cache:"no-store"});
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const d=await res.json();
+
+    const socialCharts = `<div class="charts">${barChart(d.social.chart)}
+      <div class="chart-card"><h3>Social snapshot</h3><div class="chart-sub">Five distinct dimensions rather than repeated indicators.</div>
+      <div class="note"><strong>What this section covers</strong><br>Demography, education, health, livelihoods and poverty.</div></div></div>`;
+
+    const econCharts = `<div class="charts">${lineChart(d.economic.charts[0])}${barChart(d.economic.charts[1])}</div>`;
+
+    document.getElementById("app").innerHTML = `
+      <div class="hero"><div><h1>${esc(d.meta.title)}</h1><p>${esc(d.meta.subtitle)}</p></div>
+      <div class="source-box"><span>Official source network</span><strong>Tonga Government</strong>
+      <div>${d.sources.map(esc).join(" · ")}</div></div></div>
+
+      ${pillar("social","SOCIAL","People and communities in Tonga","Population, education, health, livelihoods and wellbeing.",cards(d.social.cards)+socialCharts)}
+      ${pillar("economic","ECONOMIC","A resilient and connected economy","Growth, prices, tourism, remittances and trade.",cards(d.economic.cards)+econCharts)}
+      ${pillar("environment","ENVIRONMENT","A resilient and sustainable Tonga","Clean energy, marine management, water resilience and forests.",cards(d.environment.cards)+`<div class="note">${esc(d.environment.note)}</div>`)}
+
+      <div class="sources"><div><strong>Official sources:</strong> ${d.sources.map(esc).join("; ")}</div>
+      <div><strong>Data file updated:</strong> ${esc(d.meta.lastUpdated)}</div></div>`;
+  }catch(err){
+    document.getElementById("app").innerHTML = `<div class="error"><strong>Could not load data.</strong><br>${esc(err.message)}<br><br>
+    If you opened this file directly from your computer, run it from a web server or host it online so the browser can fetch data.json.</div>`;
+  }
+}
+load();
+</script>
+</body>
+</html>

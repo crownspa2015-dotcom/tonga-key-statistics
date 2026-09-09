@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "country": "Tonga",
+    "title": "Tonga — Key Statistics",
+    "subtitle": "Selected headline social, economic and environmental statistics from official Tonga government sources.",
+    "lastUpdated": "2026-09-09"
+  },
+  "social": {
+    "cards": [
+      {
+        "label": "Population",
+        "value": "100,179",
+        "period": "30 Nov 2021",
+        "icon": "👥"
+      },
+      {
+        "label": "Students enrolled",
+        "value": "36,604",
+        "period": "2024",
+        "icon": "🎓"
+      },
+      {
+        "label": "Life expectancy at birth",
+        "value": "70.0 years",
+        "period": "2018–2020",
+        "icon": "♡"
+      },
+      {
+        "label": "Employment-to-population ratio",
+        "value": "44%",
+        "period": "2023",
+        "icon": "💼"
+      },
+      {
+        "label": "Multidimensional poverty",
+        "value": "24%",
+        "period": "2021",
+        "icon": "◉"
+      }
+    ],
+    "chart": {
+      "title": "Student enrolment by level",
+      "subtitle": "Number of students, 2024",
+      "type": "bar",
+      "series": [
+        {
+          "label": "ECE",
+          "value": 2392
+        },
+        {
+          "label": "Primary",
+          "value": 15643
+        },
+        {
+          "label": "Middle",
+          "value": 4544
+        },
+        {
+          "label": "Secondary",
+          "value": 11241
+        },
+        {
+          "label": "TVET",
+          "value": 1085
+        },
+        {
+          "label": "Tertiary",
+          "value": 1699
+        }
+      ]
+    }
+  },
+  "economic": {
+    "cards": [
+      {
+        "label": "GDP growth",
+        "value": "4.4%",
+        "period": "2024/25",
+        "icon": "↗"
+      },
+      {
+        "label": "Annual inflation",
+        "value": "9.3%",
+        "period": "July 2026",
+        "icon": "◎"
+      },
+      {
+        "label": "Visitor arrivals",
+        "value": "74,646",
+        "period": "2025",
+        "icon": "✈"
+      },
+      {
+        "label": "Remittances",
+        "value": "T$557.8m",
+        "period": "Year ended Oct 2025",
+        "icon": "↙"
+      },
+      {
+        "label": "Trade deficit",
+        "value": "T$714.3m",
+        "period": "2025",
+        "icon": "⇄"
+      }
+    ],
+    "charts": [
+      {
+        "title": "Visitor arrivals trend",
+        "subtitle": "International visitors, 2019–2025",
+        "type": "line",
+        "series": [
+          {
+            "label": "2019",
+            "value": 93972
+          },
+          {
+            "label": "2020",
+            "value": 11546
+          },
+          {
+            "label": "2021",
+            "value": 202
+          },
+          {
+            "label": "2022",
+            "value": 22318
+          },
+          {
+            "label": "2023",
+            "value": 81694
+          },
+          {
+            "label": "2024",
+            "value": 81146
+          },
+          {
+            "label": "2025",
+            "value": 74646
+          }
+        ]
+      },
+      {
+        "title": "Imports vs exports",
+        "subtitle": "International merchandise trade, 2025",
+        "type": "bar",
+        "series": [
+          {
+            "label": "Imports",
+            "value": 739.5,
+            "display": "T$739.5m"
+          },
+          {
+            "label": "Exports",
+            "value": 25.3,
+            "display": "T$25.3m"
+          }
+        ]
+      }
+    ]
+  },
+  "environment": {
+    "cards": [
+      {
+        "label": "Renewable electricity generation",
+        "value": "27.1%",
+        "period": "2023",
+        "icon": "☀"
+      },
+      {
+        "label": "Electricity access",
+        "value": "99%",
+        "period": "2023",
+        "icon": "⚡"
+      },
+      {
+        "label": "Special Management Areas",
+        "value": "65",
+        "period": "FY2023/24",
+        "icon": "🌊"
+      },
+      {
+        "label": "Water tanks distributed",
+        "value": "9,000+",
+        "period": "Cumulative programme total",
+        "icon": "💧"
+      },
+      {
+        "label": "Trees identified",
+        "value": "2.2m+",
+        "period": "Tongatapu pilot census, 2024",
+        "icon": "🌳"
+      }
+    ],
+    "note": "The tree figure is for Tongatapu only, not a national Tonga total. The water-tank figure is a cumulative programme total reported by the Government of Tonga."
+  },
+  "sources": [
+    "Tonga Statistics Department",
+    "Ministry of Education & Training",
+    "National Reserve Bank of Tonga",
+    "Ministry of Finance",
+    "Ministry of Fisheries",
+    "MEIDECC / Climate Change Department"
+  ]
+}
