@@ -32,9 +32,9 @@
       },
       {
         "icon": "🎓",
-        "label": "Primary net attendance",
+        "label": "Primary school attendance",
         "value": "95.8%",
-        "period": "MICS 2024",
+        "period": "Primary-school-age children attending primary school or higher · MICS 2024",
         "source": "Tonga Statistics Department — MICS 2024",
         "sourceUrl": "https://tongastats.gov.to/survey/mics-survey/"
       },
@@ -129,7 +129,7 @@
         "icon": "↗",
         "label": "Top export diversification opportunity",
         "value": "Cocoa beans",
-        "period": "#1 ranked diversification opportunity for Tonga",
+        "period": "#1 ranked · Tonga · ITC modelled diversification potential",
         "source": "International Trade Centre — SIDS Export Potential Map",
         "sourceUrl": "https://exportpotential.intracen.org/"
       },
@@ -233,8 +233,8 @@
         "icon": "⚠",
         "label": "Average annual loss from extreme weather",
         "value": "14.6% of GDP",
-        "period": "Tonga · WMO estimate",
-        "source": "WMO — State of the Climate in the South-West Pacific 2020",
+        "period": "Tonga · WMO estimate reported 2021",
+        "source": "World Meteorological Organization — State of the Climate in the South-West Pacific 2020",
         "sourceUrl": "https://wmo.int/media/news/climate-change-increases-threats-south-west-pacific"
       }
     ],
