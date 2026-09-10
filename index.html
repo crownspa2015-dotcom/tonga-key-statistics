@@ -156,8 +156,8 @@ async function load(){
       <div>${d.sources.map(esc).join(" · ")}</div></div></div>
 
       ${pillar("social","SOCIAL","People and communities in Tonga","Population, education, health, livelihoods and wellbeing.",cards(d.social.cards)+socialCharts)}
-      ${pillar("economic","ECONOMIC","A resilient and connected economy","Growth, prices, tourism, remittances and trade.",cards(d.economic.cards)+econCharts)}
-      ${pillar("environment","ENVIRONMENT","A resilient and sustainable Tonga","Energy, water, oceans, climate and biodiversity.",cards(d.environment.cards)+`<div class="note">${esc(d.environment.note)}</div>`)}
+      ${pillar("economic","ECONOMIC","A resilient and connected economy","Growth, prices, tourism, trade and debt.",cards(d.economic.cards)+econCharts)}
+      ${pillar("environment","ENVIRONMENT","A resilient and sustainable Tonga","Energy, water, oceans and climate resilience.",cards(d.environment.cards)+`<div class="note">${esc(d.environment.note)}</div>`)}
 
       <div class="sources"><div><strong>Official sources:</strong> ${d.sources.map(esc).join("; ")}</div>
       <div><strong>Data file updated:</strong> ${esc(d.meta.lastUpdated)}</div></div>`;

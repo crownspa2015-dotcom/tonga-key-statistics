@@ -6,11 +6,11 @@
   },
   "sources": [
     "Tonga Statistics Department",
-    "National Reserve Bank of Tonga",
     "Ministry of Finance",
     "Ministry of Fisheries",
     "Department of Climate Change / MEIDECC",
-    "Tonga Strategic Development Framework"
+    "International Trade Centre (ITC)",
+    "World Meteorological Organization (WMO)"
   ],
   "social": {
     "cards": [
@@ -126,12 +126,12 @@
         "sourceUrl": "https://tongastats.gov.to/download/500/annual/12783/migration-bulletin-annual-report-2025"
       },
       {
-        "icon": "$",
-        "label": "Remittances",
-        "value": "T$595.6m",
-        "period": "Year to April 2026",
-        "source": "National Reserve Bank of Tonga",
-        "sourceUrl": "https://www.reservebank.to/index.php/eco-reviews/meu/monthly-economic-update-june-2026"
+        "icon": "↗",
+        "label": "Top export diversification opportunity",
+        "value": "Cocoa beans",
+        "period": "#1 ranked · Tonga · ITC modelled diversification potential",
+        "source": "International Trade Centre — SIDS Export Potential Map",
+        "sourceUrl": "https://exportpotential.intracen.org/"
       },
       {
         "icon": "▣",
@@ -230,14 +230,14 @@
         "sourceUrl": "https://climatechange.gov.to/kingdom-of-tonga-calls-for-immediate-global-climate-action-at-cop29/"
       },
       {
-        "icon": "🌿",
-        "label": "Terrestrial protected areas",
-        "value": "14.54%",
-        "period": "2015 baseline · best verified official national baseline",
-        "source": "Tonga Strategic Development Framework 2015–2025",
-        "sourceUrl": "https://pmo.gov.to/wp-content/uploads/2020/11/TSDF-2015-2025_English.pdf"
+        "icon": "⚠",
+        "label": "Average annual loss from extreme weather",
+        "value": "14.6% of GDP",
+        "period": "Tonga · WMO estimate reported 2021",
+        "source": "World Meteorological Organization — State of the Climate in the South-West Pacific 2020",
+        "sourceUrl": "https://wmo.int/media/news/climate-change-increases-threats-south-west-pacific"
       }
     ],
-    "note": "Environment at a glance: renewable power generation reached 27.1% in 2023; safely managed drinking water was 19.7% in MICS 2024; Tonga implemented 65 Special Management Areas in FY2023/24; Tonga officially reported sea-level rise of 7.3 mm per year at COP29; the terrestrial protected-area figure is an older 2015 official baseline and is labelled as such rather than presented as current."
+    "note": "Environment at a glance: renewable power generation reached 27.1% in 2023; safely managed drinking water was 19.7% in MICS 2024; Tonga implemented 65 Special Management Areas in FY2023/24; Tonga officially reported sea-level rise of 7.3 mm per year at COP29; WMO estimated average annual loss from extreme weather at 14.6% of Tonga’s GDP in its State of the Climate in the South-West Pacific 2020 assessment."
   }
 }
