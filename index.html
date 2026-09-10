@@ -127,8 +127,8 @@ body{
   background:#fff;
 }
 .social{background:linear-gradient(180deg,#f8fcff 0%,#edf7ff 100%)}
-.economic{background:linear-gradient(180deg,#f8fcff 0%,#edf6ff 100%)}
-.environment{background:linear-gradient(180deg,#f6fcfb 0%,#e9f8f4 100%)}
+.economic{background:linear-gradient(180deg,#fffdf7 0%,#fff6df 100%)}
+.environment{background:linear-gradient(180deg,#f7fcf8 0%,#eaf7ed 100%)}
 
 .pillar-head{
   position:relative;
@@ -143,10 +143,10 @@ body{
   background:linear-gradient(90deg,#0b63d7 0%,#1b9cf0 52%,#59c5f6 100%);
 }
 .economic .pillar-head{
-  background:linear-gradient(90deg,#0759c5 0%,#138fe9 55%,#49b9f3 100%);
+  background:linear-gradient(90deg,#b56a08 0%,#e09118 55%,#f2b84b 100%);
 }
 .environment .pillar-head{
-  background:linear-gradient(90deg,#087c8c 0%,#18a99f 55%,#6bcdbf 100%);
+  background:linear-gradient(90deg,#237a4b 0%,#319b62 55%,#6fc58a 100%);
 }
 .pillar-head:before{
   content:"";
@@ -365,12 +365,6 @@ body{
   background:#fff;
   box-shadow:inset 0 0 0 1px rgba(49,109,180,.09);
 }
-.donut-center{
-  position:absolute;inset:0;z-index:2;
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  font-size:12px;line-height:1.25;
-  color:#586e92;font-weight:800;
-}
 .trade-lines{display:grid;gap:12px}
 .trade-item{
   display:flex;align-items:center;justify-content:space-between;
@@ -389,8 +383,8 @@ body{
   width:10px;height:10px;border-radius:50%;
   display:inline-block;margin-right:8px;
 }
-.trade-dot.imports{background:#0b66d3}
-.trade-dot.exports{background:#70c8ff}
+.trade-dot.imports{background:#d88916}
+.trade-dot.exports{background:#ffd27a}
 
 /* footer */
 .sources{
@@ -494,16 +488,61 @@ body{
 }
 
 
-.visual-source{
-  font-size:11px;
-  color:#4e6b93;
-  margin-top:-4px;
-  margin-bottom:12px;
-}
-.visual-source a{
+
+
+.visual-source-link{
   color:#456fa6;
   text-decoration:underline;
   text-underline-offset:2px;
+  cursor:pointer;
+}
+
+
+/* ---------- PILLAR COLOR LOGIC ----------
+   Social = blue | Economic = gold | Environment = green
+*/
+.economic .card{
+  background:linear-gradient(145deg,#fffefb,#fff8e9);
+  border-color:rgba(190,125,20,.16);
+}
+.economic .card:after{
+  background:radial-gradient(circle,rgba(224,145,24,.12),transparent 66%);
+}
+.economic .icon{
+  color:#b46b0b;
+  background:linear-gradient(145deg,#fffefb,#ffedc8);
+  border-color:rgba(190,125,20,.16);
+}
+.economic .visual{
+  background:linear-gradient(145deg,#fffefb,#fff8e9);
+  border-color:rgba(190,125,20,.15);
+}
+.economic .visual:before{
+  background:radial-gradient(circle,rgba(224,145,24,.10),transparent 70%);
+}
+.economic .trade-item{
+  background:linear-gradient(90deg,#fff5df,#ffffff);
+  border-color:rgba(190,125,20,.11);
+}
+
+.environment .card{
+  background:linear-gradient(145deg,#ffffff,#f3faf5);
+  border-color:rgba(45,135,79,.14);
+}
+.environment .icon{
+  color:#2b8654;
+  background:linear-gradient(145deg,#ffffff,#dff3e5);
+  border-color:rgba(45,135,79,.14);
+}
+.environment .visual{
+  background:linear-gradient(145deg,#ffffff,#f2faf4);
+  border-color:rgba(45,135,79,.14);
+}
+.environment .visual:before{
+  background:radial-gradient(circle,rgba(57,159,94,.10),transparent 70%);
+}
+.environment .hbar-fill{
+  background:linear-gradient(90deg,#2b8654,#70c58b);
 }
 
 </style>
@@ -515,7 +554,7 @@ const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&
 
 
 function iconSvg(label, section){
-  const stroke = section==="environment" ? "#087f79" : "#0a65cf";
+  const stroke = section==="environment" ? "#2b8654" : section==="economic" ? "#b46b0b" : "#0a65cf";
   const common = `fill="none" stroke="${stroke}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"`;
   const k = String(label||"").toLowerCase();
 
@@ -586,12 +625,12 @@ function visitorLine(chart){
     return `<line x1="${padL}" y1="${gy}" x2="${w-padR}" y2="${gy}" stroke="#dce8f4" stroke-width="1"/>`;
   }).join("");
   const points=pts.map((p,i)=>`
-    <circle cx="${x(i)}" cy="${y(p.value)}" r="4.5" fill="#0b66d3"/>
-    <text x="${x(i)}" y="${Math.max(y(p.value)-10,12)}" text-anchor="middle" font-size="10.5" fill="#0b66d3" font-weight="700">${Number(p.value).toLocaleString()}</text>
+    <circle cx="${x(i)}" cy="${y(p.value)}" r="4.5" fill="#d88916"/>
+    <text x="${x(i)}" y="${Math.max(y(p.value)-10,12)}" text-anchor="middle" font-size="10.5" fill="#d88916" font-weight="700">${Number(p.value).toLocaleString()}</text>
     <text x="${x(i)}" y="${h-7}" text-anchor="middle" font-size="10.5" fill="#61769b">${esc(p.label)}</text>`).join("");
   return `<svg class="line-svg" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
     ${grid}
-    <polyline points="${poly}" fill="none" stroke="#0b66d3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="${poly}" fill="none" stroke="#d88916" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     ${points}
   </svg>`;
 }
@@ -599,11 +638,13 @@ function visitorLine(chart){
 
 function horizontalBarVisual(chart){
   if(!chart || !Array.isArray(chart.series)) return "";
+  const sourceInline = chart.sourceUrl
+    ? ` · Source: <a class="visual-source-link" href="${esc(chart.sourceUrl)}" target="_blank" rel="noopener">${esc(chart.source || "Source")}</a>`
+    : "";
   return `<div class="visuals single-visual">
     <div class="visual">
       <h3>${esc(chart.title)}</h3>
-      <div class="visual-sub">${esc(chart.subtitle)}</div>
-      ${chart.sourceUrl ? `<div class="visual-source">Source: <a href="${esc(chart.sourceUrl)}" target="_blank" rel="noopener">${esc(chart.source || "Source")}</a></div>` : ""}
+      <div class="visual-sub">${esc(chart.subtitle)}${sourceInline}</div>
       <div class="hbars">
         ${chart.series.map(item=>`
           <div class="hbar-row">
@@ -633,12 +674,11 @@ function economicVisuals(d){
       <div class="line-wrap">${visitorLine(visits)}</div>
     </div>
     <div class="visual">
-      <h3>Merchandise trade mix</h3>
-      <div class="visual-sub">Imports and exports · 2025 · Source: Tonga Statistics Department</div>
+      <h3>${esc(trade.title)}</h3>
+      <div class="visual-sub">${esc(trade.subtitle)}</div>
       <div class="trade-wrap">
-        <div class="donut" style="background:conic-gradient(#0b66d3 0 ${impPct}%,#70c8ff ${impPct}% 100%)">
-          <div class="donut-center">2025<br>merchandise trade</div>
-        </div>
+        <div class="donut" style="background:conic-gradient(#d88916 0 ${impPct}%,#ffd27a ${impPct}% 100%)">
+</div>
         <div class="trade-lines">
           <div class="trade-item"><span><span class="trade-dot imports"></span>Imports</span><strong>${esc(trade.series[0].display||trade.series[0].value)}</strong></div>
           <div class="trade-item"><span><span class="trade-dot exports"></span>Exports</span><strong>${esc(trade.series[1].display||trade.series[1].value)}</strong></div>

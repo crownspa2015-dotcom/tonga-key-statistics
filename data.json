@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Tonga — Key Statistics",
-    "subtitle": "Official statistics at a glance — simple headline indicators across social, economic and environmental priorities.",
+    "subtitle": "Official statistics at a glance — highlighting key social, economic and environmental indicators for Tonga.",
     "lastUpdated": "10 September 2026"
   },
   "sources": [
@@ -24,7 +24,7 @@
       },
       {
         "icon": "⚥",
-        "label": "Population by sex",
+        "label": "Male / female population",
         "value": "49% / 51%",
         "period": "Male / female · 2021 Census",
         "source": "Tonga Statistics Department — 2021 Census",
@@ -58,6 +58,8 @@
     "chart": {
       "title": "School net attendance by level",
       "subtitle": "Adjusted net attendance rate · Tonga MICS 2024",
+      "source": "Tonga Statistics Department",
+      "sourceUrl": "https://tongastats.gov.to/survey/mics-survey/",
       "series": [
         {
           "label": "Primary",
@@ -74,9 +76,7 @@
           "value": 73.0,
           "display": "73.0%"
         }
-      ],
-      "source": "Tonga Statistics Department — MICS 2024",
-      "sourceUrl": "https://tongastats.gov.to/survey/mics-survey/"
+      ]
     },
     "snapshot": {
       "title": "Social snapshot",
@@ -181,7 +181,7 @@
       },
       {
         "title": "Imports vs exports",
-        "subtitle": "2025 merchandise trade · T$ million · Source: Tonga Statistics Department",
+        "subtitle": "Merchandise trade · 2025 · Source: Tonga Statistics Department",
         "series": [
           {
             "label": "Imports",
@@ -243,7 +243,9 @@
     "note": "Environment at a glance: renewable power generation reached 27.1% in 2023; safely managed drinking water was 19.7% in MICS 2024; Tonga implemented 65 Special Management Areas in FY2023/24; Tonga officially reported sea-level rise of 7.3 mm per year at COP29; WMO estimated average annual loss from extreme weather at 14.6% of Tonga’s GDP in its State of the Climate in the South-West Pacific 2020 assessment.",
     "chart": {
       "title": "Household WASH snapshot",
-      "subtitle": "Tonga MICS 2024 · Source: Tonga Statistics Department",
+      "subtitle": "Tonga MICS 2024",
+      "source": "Tonga Statistics Department",
+      "sourceUrl": "https://tongastats.gov.to/survey/mics-survey/",
       "series": [
         {
           "label": "Basic drinking water",
