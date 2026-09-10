@@ -435,6 +435,13 @@ body{
   .hero-main{padding:20px}
   .sources{flex-direction:column}
 }
+
+/* Final refinement */
+.icon svg,.badge svg{width:25px;height:25px;display:block}
+.badge svg{width:27px;height:27px}
+.hero-main .hero-art{position:absolute;right:22px;bottom:10px;width:300px;height:108px;z-index:0;opacity:.95}
+.hero-main .hero-art svg{width:100%;height:100%;display:block}
+
 </style>
 </head>
 <body>
@@ -442,11 +449,41 @@ body{
 <script>
 const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));
 
+
+function iconSvg(label, section){
+  const stroke = section==="environment" ? "#087f79" : "#0a65cf";
+  const common = `fill="none" stroke="${stroke}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"`;
+  const k = String(label||"").toLowerCase();
+
+  if(k.includes("population by sex")) return `<svg viewBox="0 0 24 24"><circle ${common} cx="9" cy="7" r="3"/><path ${common} d="M9 10v8M6 14h6M16 4v6M13 7h6"/></svg>`;
+  if(k==="population") return `<svg viewBox="0 0 24 24"><circle ${common} cx="8" cy="8" r="3"/><circle ${common} cx="16" cy="8" r="3"/><path ${common} d="M3 19c.6-3.5 2.4-5 5-5s4.4 1.5 5 5M11 19c.5-2.8 2.1-4 5-4 2.6 0 4.2 1.3 5 4"/></svg>`;
+  if(k.includes("attendance")) return `<svg viewBox="0 0 24 24"><path ${common} d="M3 9l9-5 9 5-9 5-9-5z"/><path ${common} d="M7 12v5c3 2 7 2 10 0v-5M21 10v6"/></svg>`;
+  if(k.includes("mortality")) return `<svg viewBox="0 0 24 24"><path ${common} d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>`;
+  if(k.includes("poverty")) return `<svg viewBox="0 0 24 24"><path ${common} d="M4 11l8-6 8 6v8H4z"/><path ${common} d="M9 19v-5h6v5"/></svg>`;
+  if(k.includes("gdp")) return `<svg viewBox="0 0 24 24"><path ${common} d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>`;
+  if(k.includes("inflation")) return `<svg viewBox="0 0 24 24"><path ${common} d="M3 17l6-6 4 4 7-8"/><path ${common} d="M15 7h5v5"/></svg>`;
+  if(k.includes("visitor")) return `<svg viewBox="0 0 24 24"><path ${common} d="M3 13l18-5-18-5 4 5-4 5z"/><path ${common} d="M9 8v10"/></svg>`;
+  if(k.includes("itc")) return `<svg viewBox="0 0 24 24"><path ${common} d="M4 18V9M10 18V5M16 18v-7M22 18H2"/><path ${common} d="M14 5h6v6"/></svg>`;
+  if(k.includes("debt")) return `<svg viewBox="0 0 24 24"><rect ${common} x="4" y="4" width="16" height="16" rx="2"/><path ${common} d="M8 9h8M8 13h8M8 17h5"/></svg>`;
+  if(k.includes("renewable")) return `<svg viewBox="0 0 24 24"><circle ${common} cx="12" cy="12" r="3.5"/><path ${common} d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>`;
+  if(k.includes("drinking water")) return `<svg viewBox="0 0 24 24"><path ${common} d="M12 3S6 10 6 15a6 6 0 0 0 12 0c0-5-6-12-6-12z"/></svg>`;
+  if(k.includes("marine special")) return `<svg viewBox="0 0 24 24"><path ${common} d="M3 12c4-5 10-5 14 0-4 5-10 5-14 0z"/><path ${common} d="M17 12l4-3v6l-4-3z"/><circle cx="8" cy="11" r="1" fill="${stroke}"/></svg>`;
+  if(k.includes("sea-level")) return `<svg viewBox="0 0 24 24"><path ${common} d="M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0M12 4v8M9 7l3-3 3 3"/></svg>`;
+  if(k.includes("extreme weather")) return `<svg viewBox="0 0 24 24"><path ${common} d="M12 3l10 18H2L12 3z"/><path ${common} d="M12 9v5M12 18h.01"/></svg>`;
+  return `<svg viewBox="0 0 24 24"><circle ${common} cx="12" cy="12" r="7"/></svg>`;
+}
+
+function sectionIcon(section){
+  if(section==="social") return `<svg viewBox="0 0 24 24"><circle fill="none" stroke="white" stroke-width="2" cx="8" cy="8" r="3"/><circle fill="none" stroke="white" stroke-width="2" cx="16" cy="8" r="3"/><path fill="none" stroke="white" stroke-width="2" stroke-linecap="round" d="M3 19c.6-3.5 2.4-5 5-5s4.4 1.5 5 5M11 19c.5-2.8 2.1-4 5-4 2.6 0 4.2 1.3 5 4"/></svg>`;
+  if(section==="economic") return `<svg viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-width="2" stroke-linecap="round" d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>`;
+  return `<svg viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 18c8 0 13-5 14-13-8 1-13 6-14 13zM5 18c3-4 6-7 10-9"/></svg>`;
+}
+
 function sourceList(sources){return sources.map(esc).join(" · ");}
 
-function card(c){
+function card(c, section){
   return `<div class="card">
-    <div class="icon">${esc(c.icon)}</div>
+    <div class="icon">${iconSvg(c.label, section)}</div>
     <div class="card-body">
       <div class="label">${esc(c.label)}</div>
       <div class="value">${esc(c.value)}</div>
@@ -455,12 +492,12 @@ function card(c){
     </div>
   </div>`;
 }
-function cards(arr){return `<div class="cards">${arr.map(card).join("")}</div>`;}
+function cards(arr, section){return `<div class="cards">${arr.map(c=>card(c,section)).join("")}</div>`;}
 
 function pillar(cls,icon,title,tag,strap,inner){
   return `<section class="pillar ${cls}">
     <div class="pillar-head">
-      <div class="badge">${icon}</div>
+      <div class="badge">${sectionIcon(cls)}</div>
       <h2>${title}</h2>
       <div class="tag">${tag}</div>
       <div class="strap">${strap}</div>
@@ -531,27 +568,11 @@ async function load(){
     if(!r.ok) throw new Error(`HTTP ${r.status}`);
     const d=await r.json();
 
-    const socialInner =
-      cards(d.social.cards) +
-      ribbon([
-        {icon:"👥",text:"Demographics"},
-        {icon:"🎓",text:"Education"},
-        {icon:"♥",text:"Health"},
-        {icon:"⌂",text:"Wellbeing"}
-      ]);
+    const socialInner = cards(d.social.cards, "social");
 
-    const economicInner =
-      cards(d.economic.cards) +
-      economicVisuals(d);
+    const economicInner = cards(d.economic.cards, "economic") + economicVisuals(d);
 
-    const environmentInner =
-      cards(d.environment.cards) +
-      ribbon([
-        {icon:"☀",text:"Energy"},
-        {icon:"💧",text:"Water"},
-        {icon:"🐟",text:"Oceans"},
-        {icon:"≈",text:"Climate resilience"}
-      ]);
+    const environmentInner = cards(d.environment.cards, "environment");
 
     document.getElementById("app").innerHTML=`
       <main class="wrap">
@@ -559,10 +580,28 @@ async function load(){
           <div class="hero-main">
             <h1>${esc(d.meta.title)}</h1>
             <p>${esc(d.meta.subtitle)}</p>
+            <div class="hero-art" aria-hidden="true">
+              <svg viewBox="0 0 300 108">
+                <defs>
+                  <linearGradient id="sea" x1="0" x2="1">
+                    <stop offset="0" stop-color="#8bdcff" stop-opacity=".12"/>
+                    <stop offset="1" stop-color="#0f8fe8" stop-opacity=".34"/>
+                  </linearGradient>
+                  <linearGradient id="island" x1="0" x2="1">
+                    <stop offset="0" stop-color="#2fb6a5" stop-opacity=".24"/>
+                    <stop offset="1" stop-color="#0b7f90" stop-opacity=".38"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 78 C55 58 99 86 155 69 C204 55 244 65 300 46 L300 108 L0 108 Z" fill="url(#sea)"/>
+                <path d="M72 73 C105 49 150 46 189 67 C160 74 123 78 72 73 Z" fill="url(#island)"/>
+                <path d="M121 59 C126 50 132 43 138 36 M136 51 C129 47 123 46 117 47 M136 47 C143 41 151 40 157 42"
+                      fill="none" stroke="#087f90" stroke-opacity=".36" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
           </div>
           <div class="source-box">
             <div class="kicker">Official source network</div>
-            <strong>Tonga Government + ITC + WMO</strong>
+            <strong>Official & authoritative sources</strong>
             <div class="source-list">${sourceList(d.sources)}</div>
           </div>
         </section>
@@ -586,4 +625,3 @@ load();
 </script>
 </body>
 </html>
-
