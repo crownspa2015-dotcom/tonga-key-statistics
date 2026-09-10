@@ -6,456 +6,413 @@
 <title>Tonga — Key Statistics</title>
 <style>
 :root{
-  --navy:#081a55;
-  --ink:#10235f;
-  --muted:#63759b;
-  --line:#d7e8f7;
-  --sky:#eaf6ff;
-  --blue1:#0b72d9;
-  --blue2:#29a7f5;
-  --blue3:#dff3ff;
-  --econ1:#0a66c8;
-  --econ2:#1897ec;
-  --env1:#087f8c;
-  --env2:#20b7aa;
-  --envSoft:#e7f8f5;
-  --shadow:0 12px 28px rgba(20,63,128,.10);
-  --shadow2:0 7px 18px rgba(20,63,128,.08);
+  --navy:#07195b;
+  --navy2:#0b2e82;
+  --blue:#0a67db;
+  --blue2:#22a5f5;
+  --cyan:#6bd0ff;
+  --teal:#078d8a;
+  --teal2:#1fb6a4;
+  --ice:#eef8ff;
+  --ink:#0b1f63;
+  --muted:#60739a;
+  --line:#cfe2f4;
+  --card:#ffffff;
+  --shadow:0 10px 28px rgba(20,66,137,.10);
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden}
+html,body{margin:0;max-width:100%;overflow-x:hidden}
 body{
-  font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
   color:var(--ink);
   background:
-    radial-gradient(circle at 10% 0%,rgba(37,154,239,.10),transparent 28%),
-    linear-gradient(180deg,#ffffff 0%,#f5fbff 55%,#edf7ff 100%);
+    radial-gradient(circle at 15% 0%,rgba(64,170,255,.11),transparent 28%),
+    linear-gradient(180deg,#ffffff 0%,#f5fbff 60%,#eef8ff 100%);
 }
-a{color:inherit}
-.wrap{width:100%;padding:14px 14px 28px}
+.wrap{width:100%;padding:14px 14px 26px}
 
-/* top */
+/* ---------- HERO ---------- */
 .hero{
   display:grid;
-  grid-template-columns:minmax(0,1.55fr) minmax(320px,.75fr);
+  grid-template-columns:minmax(0,1.45fr) minmax(320px,.65fr);
   gap:16px;
-  align-items:stretch;
   margin-bottom:18px;
 }
-.hero-main{
+.hero-main,.source-box{
   position:relative;
   overflow:hidden;
-  border:1px solid rgba(61,124,191,.16);
+  border:1px solid rgba(54,116,187,.16);
   border-radius:22px;
-  padding:24px 26px;
+  box-shadow:var(--shadow);
+}
+.hero-main{
+  min-height:170px;
+  padding:24px 28px;
   background:
-    linear-gradient(110deg,rgba(255,255,255,.99) 0%,rgba(255,255,255,.96) 52%,rgba(220,243,255,.90) 100%);
-  box-shadow:var(--shadow2);
+    linear-gradient(115deg,rgba(255,255,255,.99) 0%,rgba(252,254,255,.97) 50%,rgba(221,243,255,.92) 100%);
 }
 .hero-main:before{
   content:"";
   position:absolute;
-  right:-20px;bottom:-95px;
-  width:380px;height:230px;
-  border-radius:50% 50% 0 0;
+  width:450px;height:450px;
+  right:-170px;top:-220px;
+  border-radius:50%;
   background:
-    radial-gradient(circle at 62% 38%,rgba(45,173,245,.35),transparent 23%),
-    linear-gradient(180deg,rgba(96,206,255,.12),rgba(14,105,196,.14));
-  transform:rotate(-7deg);
+    radial-gradient(circle at 40% 60%,rgba(32,155,244,.38),rgba(90,199,255,.16) 38%,rgba(255,255,255,0) 66%);
 }
 .hero-main:after{
   content:"";
   position:absolute;
-  right:55px;bottom:4px;
-  width:210px;height:32px;
+  right:-20px;bottom:-38px;
+  width:420px;height:120px;
   border-radius:50%;
-  background:rgba(20,126,198,.08);
-  box-shadow:0 -18px 0 rgba(77,190,228,.06),0 -36px 0 rgba(102,204,235,.04);
+  background:
+    radial-gradient(ellipse at center,rgba(17,117,198,.20),rgba(25,157,218,.10) 50%,transparent 72%);
+  transform:rotate(-5deg);
 }
 .hero h1{
-  margin:2px 0 10px;
-  font-size:42px;
-  line-height:1.04;
-  letter-spacing:-.7px;
-  color:#0a1b59;
+  margin:4px 0 12px;
+  font-size:44px;
+  line-height:1.02;
+  letter-spacing:-.8px;
+  color:var(--navy);
   position:relative;z-index:1;
 }
 .hero p{
   margin:0;
-  max-width:900px;
-  font-size:15.5px;
-  line-height:1.5;
-  color:#34527f;
+  max-width:860px;
+  font-size:15px;
+  line-height:1.52;
+  color:#35557f;
   position:relative;z-index:1;
 }
 .source-box{
-  position:relative;
-  overflow:hidden;
-  border:1px solid rgba(50,116,187,.18);
-  border-radius:22px;
   padding:18px 20px;
-  background:linear-gradient(145deg,#ffffff,#eef8ff 72%,#e0f3ff);
-  box-shadow:var(--shadow);
+  background:
+    linear-gradient(150deg,#ffffff 0%,#f1f9ff 62%,#e2f2ff 100%);
 }
-.source-box:after{
+.source-box:before{
   content:"";
-  position:absolute;
-  width:150px;height:150px;
-  border-radius:50%;
-  right:-48px;bottom:-56px;
-  background:radial-gradient(circle,rgba(23,144,239,.18),transparent 68%);
+  position:absolute;right:-45px;bottom:-55px;width:170px;height:170px;border-radius:50%;
+  background:radial-gradient(circle,rgba(25,145,237,.20),transparent 68%);
 }
 .kicker{
-  font-size:10px;
-  letter-spacing:.9px;
   text-transform:uppercase;
+  letter-spacing:.9px;
+  font-size:10px;
   font-weight:800;
-  color:#5574a1;
+  color:#5574a2;
   margin-bottom:6px;
 }
 .source-box strong{
   display:block;
   font-size:18px;
+  color:var(--navy);
   margin-bottom:7px;
-  color:#0a1b59;
 }
 .source-list{
-  font-size:12.5px;
-  line-height:1.4;
-  color:#3e5b86;
+  font-size:12.4px;
+  line-height:1.42;
+  color:#3f5d88;
   position:relative;z-index:1;
 }
 
-/* sections */
+/* ---------- SECTION SHELL ---------- */
 .pillar{
   margin:18px 0;
-  border-radius:22px;
-  border:1px solid rgba(48,110,176,.12);
-  background:#fff;
-  box-shadow:var(--shadow);
+  border-radius:23px;
   overflow:hidden;
+  border:1px solid rgba(49,111,179,.12);
+  box-shadow:var(--shadow);
+  background:#fff;
 }
-.pillar.social{background:linear-gradient(180deg,#f7fbff 0%,#eef7ff 100%)}
-.pillar.economic{background:linear-gradient(180deg,#f7fbff 0%,#edf6ff 100%)}
-.pillar.environment{background:linear-gradient(180deg,#f4fbfa 0%,#e9f8f5 100%)}
+.social{background:linear-gradient(180deg,#f8fcff 0%,#edf7ff 100%)}
+.economic{background:linear-gradient(180deg,#f8fcff 0%,#edf6ff 100%)}
+.environment{background:linear-gradient(180deg,#f6fcfb 0%,#e9f8f4 100%)}
 
 .pillar-head{
-  min-height:66px;
+  position:relative;
   display:flex;
   align-items:center;
-  gap:12px;
-  padding:11px 16px;
-  position:relative;
+  gap:13px;
+  min-height:70px;
+  padding:10px 16px;
   overflow:hidden;
 }
-.social .pillar-head,
+.social .pillar-head{
+  background:linear-gradient(90deg,#0b63d7 0%,#1b9cf0 52%,#59c5f6 100%);
+}
 .economic .pillar-head{
-  background:linear-gradient(90deg,rgba(230,245,255,.98),rgba(195,231,255,.92),rgba(235,248,255,.98));
+  background:linear-gradient(90deg,#0759c5 0%,#138fe9 55%,#49b9f3 100%);
 }
 .environment .pillar-head{
-  background:linear-gradient(90deg,#dff6f2,#bdece5,#e7f9f6);
+  background:linear-gradient(90deg,#087c8c 0%,#18a99f 55%,#6bcdbf 100%);
+}
+.pillar-head:before{
+  content:"";
+  position:absolute;inset:0 0 auto 0;height:48%;
+  background:linear-gradient(180deg,rgba(255,255,255,.27),transparent);
 }
 .pillar-head:after{
   content:"";
   position:absolute;
-  left:0;right:0;top:0;height:45%;
-  background:linear-gradient(180deg,rgba(255,255,255,.45),transparent);
+  right:-45px;top:-60px;
+  width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.22),transparent 68%);
 }
 .badge{
-  width:50px;height:50px;
-  flex:0 0 auto;
+  width:52px;height:52px;flex:0 0 auto;
   display:flex;align-items:center;justify-content:center;
   border-radius:50%;
+  font-size:23px;
   color:#fff;
-  font-size:22px;
-  font-weight:800;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.42);
+  box-shadow:inset 0 1px rgba(255,255,255,.55),0 6px 14px rgba(0,40,100,.18);
   position:relative;z-index:1;
-  box-shadow:inset 0 1px rgba(255,255,255,.45),0 6px 14px rgba(17,86,161,.18);
 }
-.social .badge{background:linear-gradient(145deg,#0a67d6,#23a4f3)}
-.economic .badge{background:linear-gradient(145deg,#075fc3,#1497e8)}
-.environment .badge{background:linear-gradient(145deg,#057884,#19b4a6)}
 .pillar h2{
   margin:0;
-  font-size:27px;
+  color:white;
+  font-size:28px;
   letter-spacing:-.3px;
-  color:#0a1b59;
   position:relative;z-index:1;
 }
-.tag{
+.tag,.strap{
+  color:rgba(255,255,255,.96);
   font-size:12.5px;
-  color:#385885;
   position:relative;z-index:1;
 }
 .strap{
   margin-left:auto;
   max-width:42%;
   text-align:right;
-  font-size:12.5px;
-  font-weight:650;
-  color:#2c5c92;
-  position:relative;z-index:1;
+  font-weight:700;
 }
-.environment .strap{color:#1d756f}
 
+/* ---------- CARDS ---------- */
 .cards{
   display:grid;
   grid-template-columns:repeat(5,minmax(0,1fr));
   gap:11px;
-  padding:12px;
+  padding:13px;
 }
 .card{
+  min-height:154px;
   position:relative;
   overflow:hidden;
-  min-height:150px;
-  padding:14px 13px;
   display:flex;
   gap:12px;
   align-items:flex-start;
-  border-radius:16px;
-  border:1px solid rgba(45,110,181,.14);
+  padding:14px 13px;
+  border-radius:17px;
+  border:1px solid rgba(45,108,181,.13);
   background:
-    linear-gradient(150deg,rgba(255,255,255,.99),rgba(248,252,255,.98));
-  box-shadow:0 7px 18px rgba(15,67,132,.07),inset 0 1px #fff;
+    linear-gradient(145deg,rgba(255,255,255,.995),rgba(247,251,255,.98));
+  box-shadow:0 7px 17px rgba(18,69,132,.07),inset 0 1px #fff;
 }
 .card:before{
   content:"";
-  position:absolute;
-  left:0;top:0;right:0;height:42%;
-  background:linear-gradient(180deg,rgba(209,239,255,.28),transparent);
+  position:absolute;left:0;top:0;right:0;height:38%;
+  background:linear-gradient(180deg,rgba(205,236,255,.30),transparent);
 }
 .card:after{
   content:"";
   position:absolute;
-  right:-22px;bottom:-30px;
-  width:95px;height:95px;border-radius:50%;
-  background:radial-gradient(circle,rgba(47,157,239,.10),transparent 66%);
+  right:-28px;bottom:-35px;width:105px;height:105px;border-radius:50%;
+  background:radial-gradient(circle,rgba(37,151,240,.11),transparent 66%);
 }
-.environment .card:after{background:radial-gradient(circle,rgba(27,175,159,.11),transparent 66%)}
+.environment .card:after{
+  background:radial-gradient(circle,rgba(31,177,158,.12),transparent 66%);
+}
 .icon{
-  width:48px;height:48px;
-  flex:0 0 auto;
+  width:50px;height:50px;flex:0 0 auto;
   display:flex;align-items:center;justify-content:center;
-  border-radius:18px;
-  font-size:21px;
-  color:#0d63cd;
-  background:linear-gradient(145deg,#f8fcff,#dceeff);
-  border:1px solid rgba(34,117,205,.12);
-  box-shadow:inset 0 1px #fff,0 5px 12px rgba(24,104,184,.10);
+  border-radius:16px;
+  font-size:22px;
+  color:#0a65cf;
+  background:linear-gradient(145deg,#ffffff,#dceeff);
+  border:1px solid rgba(36,117,205,.12);
+  box-shadow:0 7px 15px rgba(21,102,183,.10),inset 0 1px #fff;
   position:relative;z-index:1;
 }
 .environment .icon{
-  color:#087f78;
-  background:linear-gradient(145deg,#f7fffd,#daf3ed);
+  color:#087f79;
+  background:linear-gradient(145deg,#ffffff,#d9f3ec);
 }
-.card-body{position:relative;z-index:1;min-width:0}
+.card-body{min-width:0;position:relative;z-index:1}
 .label{
-  font-size:12.5px;
+  font-size:12.4px;
   font-weight:800;
-  line-height:1.25;
-  color:#10265e;
+  line-height:1.23;
+  color:#0c2460;
   margin-bottom:7px;
 }
 .value{
-  font-size:clamp(20px,1.72vw,28px);
-  line-height:1.03;
+  font-size:clamp(20px,1.7vw,28px);
+  line-height:1.04;
   font-weight:900;
-  color:#081a57;
-  letter-spacing:-.35px;
+  color:#071a59;
+  letter-spacing:-.4px;
   white-space:nowrap;
 }
 .period{
-  font-size:11.6px;
+  font-size:11.5px;
   line-height:1.32;
-  color:#61769b;
+  color:#61769c;
   margin-top:7px;
 }
 .card-source{
-  font-size:10.2px;
+  font-size:10px;
   line-height:1.24;
-  color:#385a86;
+  color:#3d5d88;
   margin-top:8px;
 }
-.card-source a{text-decoration:none;color:#426da5}
-.card-source a:hover{text-decoration:underline}
+.card-source a{color:#456fa6;text-decoration:none}
 
-/* visual rows */
+/* ---------- INFOGRAPHIC DIVIDERS ---------- */
+.ribbon{
+  margin:2px 13px 13px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-height:52px;
+  border-radius:14px;
+  padding:10px 14px;
+  border:1px solid rgba(43,112,187,.10);
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.92),rgba(231,246,255,.92),rgba(255,255,255,.92));
+  color:#36567d;
+  font-size:13px;
+  line-height:1.4;
+}
+.environment .ribbon{
+  background:linear-gradient(90deg,rgba(255,255,255,.92),rgba(224,247,241,.94),rgba(255,255,255,.92));
+}
+.ribbon .mini{
+  display:flex;align-items:center;gap:8px;
+  padding-right:14px;
+  border-right:1px solid rgba(63,122,181,.13);
+  font-weight:800;
+  color:#0b2a66;
+}
+.ribbon .mini:last-child{border-right:0}
+.ribbon .dot{
+  width:28px;height:28px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(145deg,#ecf7ff,#cfe9ff);
+  color:#0b65cb;
+  font-size:14px;
+}
+.environment .ribbon .dot{
+  background:linear-gradient(145deg,#effaf8,#d4f1eb);
+  color:#087b75;
+}
+
+/* ---------- VISUAL BLOCKS ---------- */
 .visuals{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,1fr);
   gap:12px;
-  padding:0 12px 14px;
+  padding:0 13px 14px;
 }
 .visual{
   position:relative;
   overflow:hidden;
+  border-radius:17px;
   border:1px solid rgba(45,110,181,.13);
-  border-radius:16px;
-  background:linear-gradient(145deg,#ffffff,#f5fbff);
-  box-shadow:0 6px 16px rgba(16,67,132,.06);
-  padding:15px 16px;
-  min-height:210px;
+  background:linear-gradient(145deg,#ffffff,#f6fbff);
+  box-shadow:0 7px 17px rgba(18,69,132,.06);
+  padding:15px 17px;
+  min-height:238px;
 }
-.environment .visual{
-  background:linear-gradient(145deg,#ffffff,#f3fbf9);
+.visual:before{
+  content:"";
+  position:absolute;
+  right:-80px;top:-100px;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(46,160,241,.10),transparent 70%);
 }
 .visual h3{
-  margin:0 0 3px;
-  font-size:19px;
-  color:#0b1d58;
+  margin:0 0 4px;
+  font-size:20px;
+  color:#0b1e5b;
 }
 .visual-sub{
   font-size:12.6px;
-  color:#61769a;
-  margin-bottom:13px;
+  color:#61769b;
+  margin-bottom:12px;
 }
 
-/* social split */
-.sex-wrap{
-  display:grid;
-  grid-template-columns:1fr 1.4fr 1fr;
-  gap:18px;
-  align-items:center;
-  min-height:150px;
-}
-.sex-side{font-size:14px;color:#25466f}
-.sex-side strong{display:block;font-size:25px;color:#091b57;margin-bottom:3px}
-.sex-side.left{text-align:right}.sex-side.right{text-align:left}
-.sex-bar{
-  position:relative;
-  height:34px;
-  border-radius:999px;
-  overflow:hidden;
-  background:#eaf3fb;
-  box-shadow:inset 0 2px 6px rgba(32,79,128,.10);
-}
-.sex-male,.sex-female{height:100%;position:absolute;top:0}
-.sex-male{left:0;background:linear-gradient(90deg,#63bfff,#2d92ef)}
-.sex-female{right:0;background:linear-gradient(90deg,#1570dc,#075cc3)}
-.sex-total{
-  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  color:#fff;font-weight:850;font-size:12px;text-shadow:0 1px 3px rgba(0,0,0,.18)
-}
-.insight{
-  min-height:150px;
-  display:grid;
-  grid-template-columns:78px 1fr;
-  gap:16px;
-  align-items:center;
-  padding:16px;
-  border-radius:14px;
-  background:linear-gradient(110deg,#f8fcff,#eaf6ff);
-  border:1px solid rgba(49,116,187,.10);
-}
-.insight-icon{
-  width:68px;height:68px;border-radius:22px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:31px;
-  color:#0d67d4;
-  background:linear-gradient(145deg,#ffffff,#dff1ff);
-  box-shadow:0 8px 18px rgba(15,91,178,.10),inset 0 1px #fff;
-}
-.insight p{margin:0;font-size:14px;line-height:1.5;color:#355478}
-
-/* economic line chart */
-.line-wrap{height:180px;position:relative}
+/* visitor line */
+.line-wrap{height:185px}
 .line-svg{width:100%;height:100%;display:block}
+
+/* trade donut */
 .trade-wrap{
   display:grid;
-  grid-template-columns:170px 1fr;
-  gap:18px;
+  grid-template-columns:190px 1fr;
+  gap:20px;
   align-items:center;
+  min-height:175px;
 }
 .donut{
-  width:158px;height:158px;border-radius:50%;
-  position:relative;
-  box-shadow:0 10px 20px rgba(20,91,169,.12),inset 0 1px #fff;
+  width:170px;height:170px;border-radius:50%;
+  position:relative;margin:auto;
+  box-shadow:0 10px 24px rgba(16,87,165,.13),inset 0 1px #fff;
 }
 .donut:after{
-  content:"";
-  position:absolute;inset:32px;border-radius:50%;
-  background:white;
-  box-shadow:inset 0 0 0 1px rgba(52,111,180,.08);
+  content:"";position:absolute;inset:34px;border-radius:50%;
+  background:#fff;
+  box-shadow:inset 0 0 0 1px rgba(49,109,180,.09);
 }
 .donut-center{
   position:absolute;inset:0;z-index:2;
   display:flex;align-items:center;justify-content:center;text-align:center;
-  font-size:12px;line-height:1.25;color:#536b91;font-weight:700;
+  font-size:12px;line-height:1.25;
+  color:#586e92;font-weight:800;
 }
-.trade-lines{display:grid;gap:10px}
+.trade-lines{display:grid;gap:12px}
 .trade-item{
   display:flex;align-items:center;justify-content:space-between;
-  gap:12px;padding:9px 11px;border-radius:12px;
-  background:linear-gradient(90deg,#eef7ff,#ffffff);
-  border:1px solid rgba(46,115,187,.09);
-  color:#36547c;font-size:13px;
-}
-.trade-item strong{font-size:18px;color:#091b58}
-.dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:7px}
-.dot.imports{background:#0c67d3}
-.dot.exports{background:#6cc4ff}
-
-/* environment rings */
-.env-visual{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
   gap:12px;
+  padding:11px 12px;
+  border-radius:12px;
+  background:linear-gradient(90deg,#eef7ff,#ffffff);
+  border:1px solid rgba(45,111,183,.09);
+  color:#36577f;
+  font-size:13px;
 }
-.ring-card{
-  min-height:170px;
-  display:flex;
-  align-items:center;
-  gap:14px;
-  padding:14px;
-  border-radius:14px;
-  background:linear-gradient(145deg,#ffffff,#effaf7);
-  border:1px solid rgba(32,139,129,.10);
+.trade-item strong{
+  font-size:19px;color:#091b59;
 }
-.ring{
-  width:88px;height:88px;border-radius:50%;
-  position:relative;flex:0 0 auto;
-  box-shadow:0 8px 17px rgba(28,123,114,.10),inset 0 1px #fff;
+.trade-dot{
+  width:10px;height:10px;border-radius:50%;
+  display:inline-block;margin-right:8px;
 }
-.ring:after{
-  content:"";position:absolute;inset:17px;border-radius:50%;background:white;
-}
-.ring-label{font-size:12px;color:#58716e;line-height:1.3}
-.ring-label strong{display:block;font-size:22px;color:#0a3d56;margin-bottom:4px}
-.marine-highlight{
-  min-height:170px;
-  padding:18px;
-  border-radius:14px;
-  background:linear-gradient(135deg,#e6f9f5,#c9efe8 60%,#edf9f7);
-  border:1px solid rgba(31,145,134,.12);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-.marine-highlight span{font-size:32px;margin-bottom:7px}
-.marine-highlight strong{font-size:28px;color:#075968}
-.marine-highlight p{font-size:12.5px;line-height:1.42;color:#3f716f;margin:5px 0 0}
+.trade-dot.imports{background:#0b66d3}
+.trade-dot.exports{background:#70c8ff}
 
 /* footer */
 .sources{
   margin-top:18px;
-  padding:16px 10px 4px;
-  border-top:1px solid rgba(45,110,181,.12);
+  padding:16px 9px 3px;
   display:flex;justify-content:space-between;gap:20px;
-  color:#516782;
-  font-size:12.5px;
-  line-height:1.4;
+  border-top:1px solid rgba(47,109,180,.12);
+  color:#526884;
+  font-size:12.4px;
+  line-height:1.42;
 }
 .error{
   margin:20px;padding:18px;border-radius:14px;
-  border:1px solid #e8b4b4;background:#fff7f7;color:#7b2323
+  border:1px solid #e7b5b5;background:#fff7f7;color:#7b2323
 }
 
 @media(max-width:1450px){
-  .card{min-height:145px;padding:12px 10px;gap:8px}
-  .icon{width:40px;height:40px;border-radius:14px;font-size:18px}
+  .card{min-height:148px;padding:12px 10px;gap:8px}
+  .icon{width:42px;height:42px;border-radius:14px;font-size:18px}
+  .label{font-size:11.8px}
   .value{font-size:20px}
-  .label{font-size:11.7px}
-  .period{font-size:10.8px}
+  .period{font-size:10.9px}
   .card-source{font-size:9.5px}
 }
 @media(max-width:1180px){
@@ -467,10 +424,9 @@ a{color:inherit}
 @media(max-width:820px){
   .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hero h1{font-size:34px}
-  .env-visual{grid-template-columns:1fr}
-  .trade-wrap{grid-template-columns:1fr}
-  .donut{margin:auto}
   .strap{display:none}
+  .trade-wrap{grid-template-columns:1fr}
+  .ribbon{flex-wrap:wrap}
 }
 @media(max-width:560px){
   .wrap{padding:10px 8px 22px}
@@ -478,20 +434,15 @@ a{color:inherit}
   .pillar-head{flex-wrap:wrap}
   .hero-main{padding:20px}
   .sources{flex-direction:column}
-  .sex-wrap{grid-template-columns:1fr}
-  .sex-side.left,.sex-side.right{text-align:center}
 }
 </style>
 </head>
 <body>
 <div id="app"></div>
-
 <script>
-const esc = s => String(s ?? "").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));
+const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));
 
-function sourceList(sources){
-  return sources.map(esc).join(" · ");
-}
+function sourceList(sources){return sources.map(esc).join(" · ");}
 
 function card(c){
   return `<div class="card">
@@ -504,10 +455,9 @@ function card(c){
     </div>
   </div>`;
 }
+function cards(arr){return `<div class="cards">${arr.map(card).join("")}</div>`;}
 
-function cards(arr){ return `<div class="cards">${arr.map(card).join("")}</div>`; }
-
-function pillar(cls, icon, title, tag, strap, inner){
+function pillar(cls,icon,title,tag,strap,inner){
   return `<section class="pillar ${cls}">
     <div class="pillar-head">
       <div class="badge">${icon}</div>
@@ -519,70 +469,40 @@ function pillar(cls, icon, title, tag, strap, inner){
   </section>`;
 }
 
-function getSexValues(d){
-  const c = d.social.cards.find(x=>x.label==="Population by sex");
-  const nums = String(c?.value||"49 / 51").match(/[\d.]+/g)||["49","51"];
-  return {male:Number(nums[0]),female:Number(nums[1])};
-}
-
-function socialVisuals(d){
-  const sex = getSexValues(d);
-  const pop = d.social.cards.find(x=>x.label==="Population")?.value || "100,179";
-  return `<div class="visuals">
-    <div class="visual">
-      <h3>Population profile</h3>
-      <div class="visual-sub">Population by sex · 2021 Census</div>
-      <div class="sex-wrap">
-        <div class="sex-side left"><strong>${esc(sex.male)}%</strong>Male</div>
-        <div class="sex-bar">
-          <div class="sex-male" style="width:${sex.male}%"></div>
-          <div class="sex-female" style="width:${sex.female}%"></div>
-          <div class="sex-total">${esc(pop)} people</div>
-        </div>
-        <div class="sex-side right"><strong>${esc(sex.female)}%</strong>Female</div>
-      </div>
-    </div>
-    <div class="visual">
-      <h3>Social snapshot</h3>
-      <div class="visual-sub">A quick picture of Tonga’s people and wellbeing.</div>
-      <div class="insight">
-        <div class="insight-icon">👥</div>
-        <p><strong>${esc(d.social.snapshot.lines[0].head)}</strong> ${esc(d.social.snapshot.lines[0].text)}<br><br>
-        <strong>${esc(d.social.snapshot.lines[1].head)}</strong> ${esc(d.social.snapshot.lines[1].text)}</p>
-      </div>
-    </div>
-  </div>`;
+function ribbon(items){
+  return `<div class="ribbon">${items.map(i=>`<div class="mini"><span class="dot">${i.icon}</span>${i.text}</div>`).join("")}</div>`;
 }
 
 function visitorLine(chart){
-  const pts = chart.series;
-  const w=720,h=165,padL=34,padR=22,padT=18,padB=28;
+  const pts=chart.series;
+  const w=720,h=170,padL=34,padR=25,padT=18,padB=30;
   const max=Math.max(...pts.map(x=>x.value),1);
-  const x=i=>padL + i*(w-padL-padR)/(pts.length-1);
-  const y=v=>padT + (h-padT-padB)*(1-v/max);
+  const x=i=>padL+i*(w-padL-padR)/(pts.length-1);
+  const y=v=>padT+(h-padT-padB)*(1-v/max);
   const poly=pts.map((p,i)=>`${x(i)},${y(p.value)}`).join(" ");
   const grid=[0,.25,.5,.75,1].map(fr=>{
     const gy=padT+(h-padT-padB)*fr;
-    return `<line x1="${padL}" y1="${gy}" x2="${w-padR}" y2="${gy}" stroke="#dfeaf5" stroke-width="1"/>`;
+    return `<line x1="${padL}" y1="${gy}" x2="${w-padR}" y2="${gy}" stroke="#dce8f4" stroke-width="1"/>`;
   }).join("");
   const points=pts.map((p,i)=>`
-    <circle cx="${x(i)}" cy="${y(p.value)}" r="4.5" fill="#0c67d3"/>
-    <text x="${x(i)}" y="${Math.max(y(p.value)-10,12)}" text-anchor="middle" font-size="10.5" fill="#0c67d3" font-weight="700">${Number(p.value).toLocaleString()}</text>
-    <text x="${x(i)}" y="${h-6}" text-anchor="middle" font-size="10.5" fill="#63759b">${esc(p.label)}</text>`).join("");
+    <circle cx="${x(i)}" cy="${y(p.value)}" r="4.5" fill="#0b66d3"/>
+    <text x="${x(i)}" y="${Math.max(y(p.value)-10,12)}" text-anchor="middle" font-size="10.5" fill="#0b66d3" font-weight="700">${Number(p.value).toLocaleString()}</text>
+    <text x="${x(i)}" y="${h-7}" text-anchor="middle" font-size="10.5" fill="#61769b">${esc(p.label)}</text>`).join("");
   return `<svg class="line-svg" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
     ${grid}
-    <polyline points="${poly}" fill="none" stroke="#0c67d3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="${poly}" fill="none" stroke="#0b66d3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     ${points}
   </svg>`;
 }
 
 function economicVisuals(d){
-  const visits=d.economic.charts[0];
-  const trade=d.economic.charts[1];
+  const visits=d.economic.charts?.[0];
+  const trade=d.economic.charts?.[1];
+  if(!visits || !trade) return "";
   const imp=trade.series.find(x=>x.label==="Imports")?.value||0;
   const exp=trade.series.find(x=>x.label==="Exports")?.value||0;
-  const total=imp+exp || 1;
-  const impPct=(imp/total*100);
+  const total=imp+exp||1;
+  const impPct=imp/total*100;
   return `<div class="visuals">
     <div class="visual">
       <h3>${esc(visits.title)}</h3>
@@ -593,41 +513,12 @@ function economicVisuals(d){
       <h3>Merchandise trade mix</h3>
       <div class="visual-sub">Imports and exports · 2025 · Source: Tonga Statistics Department</div>
       <div class="trade-wrap">
-        <div class="donut" style="background:conic-gradient(#0c67d3 0 ${impPct}%,#6cc4ff ${impPct}% 100%)">
+        <div class="donut" style="background:conic-gradient(#0b66d3 0 ${impPct}%,#70c8ff ${impPct}% 100%)">
           <div class="donut-center">2025<br>merchandise trade</div>
         </div>
         <div class="trade-lines">
-          <div class="trade-item"><span><span class="dot imports"></span>Imports</span><strong>${esc(trade.series[0].display||trade.series[0].value)}</strong></div>
-          <div class="trade-item"><span><span class="dot exports"></span>Exports</span><strong>${esc(trade.series[1].display||trade.series[1].value)}</strong></div>
-        </div>
-      </div>
-    </div>
-  </div>`;
-}
-
-function environmentVisuals(d){
-  const ren = d.environment.cards.find(x=>x.label.includes("Renewable")) || d.environment.cards[0];
-  const water = d.environment.cards.find(x=>x.label.includes("drinking water")) || d.environment.cards[1];
-  const sma = d.environment.cards.find(x=>x.label.includes("Marine Special")) || d.environment.cards[2];
-  const r = parseFloat(String(ren.value).replace(/[^\d.]/g,"")) || 0;
-  const w = parseFloat(String(water.value).replace(/[^\d.]/g,"")) || 0;
-  return `<div class="visuals">
-    <div class="visual" style="grid-column:1/-1">
-      <h3>Environment at a glance</h3>
-      <div class="visual-sub">Selected national environment indicators</div>
-      <div class="env-visual">
-        <div class="ring-card">
-          <div class="ring" style="background:conic-gradient(#0e9388 0 ${r}%,#dff4ef ${r}% 100%)"></div>
-          <div class="ring-label"><strong>${esc(ren.value)}</strong>${esc(ren.label)}<br>${esc(ren.period)}</div>
-        </div>
-        <div class="ring-card">
-          <div class="ring" style="background:conic-gradient(#0e9388 0 ${w}%,#dff4ef ${w}% 100%)"></div>
-          <div class="ring-label"><strong>${esc(water.value)}</strong>${esc(water.label)}<br>${esc(water.period)}</div>
-        </div>
-        <div class="marine-highlight">
-          <span>🐟</span>
-          <strong>${esc(sma.value)}</strong>
-          <p>${esc(sma.label)}<br>${esc(sma.period)}</p>
+          <div class="trade-item"><span><span class="trade-dot imports"></span>Imports</span><strong>${esc(trade.series[0].display||trade.series[0].value)}</strong></div>
+          <div class="trade-item"><span><span class="trade-dot exports"></span>Exports</span><strong>${esc(trade.series[1].display||trade.series[1].value)}</strong></div>
         </div>
       </div>
     </div>
@@ -636,15 +527,33 @@ function environmentVisuals(d){
 
 async function load(){
   try{
-    const res=await fetch("data.json",{cache:"no-store"});
-    if(!res.ok) throw new Error(`HTTP ${res.status}`);
-    const d=await res.json();
+    const r=await fetch("data.json",{cache:"no-store"});
+    if(!r.ok) throw new Error(`HTTP ${r.status}`);
+    const d=await r.json();
 
-    const social = cards(d.social.cards) + socialVisuals(d);
-    const economic = cards(d.economic.cards) + economicVisuals(d);
-    const environment = cards(d.environment.cards) + environmentVisuals(d);
+    const socialInner =
+      cards(d.social.cards) +
+      ribbon([
+        {icon:"👥",text:"Demographics"},
+        {icon:"🎓",text:"Education"},
+        {icon:"♥",text:"Health"},
+        {icon:"⌂",text:"Wellbeing"}
+      ]);
 
-    document.getElementById("app").innerHTML = `
+    const economicInner =
+      cards(d.economic.cards) +
+      economicVisuals(d);
+
+    const environmentInner =
+      cards(d.environment.cards) +
+      ribbon([
+        {icon:"☀",text:"Energy"},
+        {icon:"💧",text:"Water"},
+        {icon:"🐟",text:"Oceans"},
+        {icon:"≈",text:"Climate resilience"}
+      ]);
+
+    document.getElementById("app").innerHTML=`
       <main class="wrap">
         <section class="hero">
           <div class="hero-main">
@@ -653,24 +562,24 @@ async function load(){
           </div>
           <div class="source-box">
             <div class="kicker">Official source network</div>
-            <strong>Tonga Government & authoritative partners</strong>
+            <strong>Tonga Government + ITC + WMO</strong>
             <div class="source-list">${sourceList(d.sources)}</div>
           </div>
         </section>
 
-        ${pillar("social","👥","SOCIAL","People and communities in Tonga","Building a healthier, more inclusive and prosperous Tonga.",social)}
-        ${pillar("economic","▥","ECONOMIC","A resilient and connected economy","Supporting sustainable and inclusive economic growth.",economic)}
-        ${pillar("environment","🍃","ENVIRONMENT","A resilient and sustainable Tonga","Protecting Tonga’s natural environment for future generations.",environment)}
+        ${pillar("social","👥","SOCIAL","People and communities in Tonga","Building a healthier, more inclusive and prosperous Tonga.",socialInner)}
+        ${pillar("economic","▥","ECONOMIC","A resilient and connected economy","Supporting sustainable and inclusive economic growth.",economicInner)}
+        ${pillar("environment","🍃","ENVIRONMENT","A resilient and sustainable Tonga","Protecting Tonga’s natural environment for future generations.",environmentInner)}
 
         <div class="sources">
           <div><strong>Official sources:</strong> ${sourceList(d.sources)}</div>
           <div><strong>Data file updated:</strong> ${esc(d.meta.lastUpdated)}</div>
         </div>
       </main>`;
-  }catch(err){
+  }catch(e){
     document.getElementById("app").innerHTML=
-      `<div class="error"><strong>Could not load data.</strong><br>${esc(err.message)}<br><br>
-      This page must be hosted beside <code>data.json</code> (for example on GitHub Pages).</div>`;
+      `<div class="error"><strong>Could not load data.</strong><br>${esc(e.message)}<br><br>
+      This page must be hosted beside <code>data.json</code>.</div>`;
   }
 }
 load();
