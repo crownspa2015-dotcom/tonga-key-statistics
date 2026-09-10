@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Tonga — Key Statistics",
-    "subtitle": "Official statistics at a glance — highlighting key social, economic and environmental indicators for Tonga.",
+    "subtitle": "Official statistics at a glance — simple headline indicators across social, economic and environmental priorities.",
     "lastUpdated": "10 September 2026"
   },
   "sources": [
@@ -238,6 +238,32 @@
         "sourceUrl": "https://wmo.int/media/news/climate-change-increases-threats-south-west-pacific"
       }
     ],
-    "note": "Environment at a glance: renewable power generation reached 27.1% in 2023; safely managed drinking water was 19.7% in MICS 2024; Tonga implemented 65 Special Management Areas in FY2023/24; Tonga officially reported sea-level rise of 7.3 mm per year at COP29; WMO estimated average annual loss from extreme weather at 14.6% of Tonga’s GDP in its State of the Climate in the South-West Pacific 2020 assessment."
+    "note": "Environment at a glance: renewable power generation reached 27.1% in 2023; safely managed drinking water was 19.7% in MICS 2024; Tonga implemented 65 Special Management Areas in FY2023/24; Tonga officially reported sea-level rise of 7.3 mm per year at COP29; WMO estimated average annual loss from extreme weather at 14.6% of Tonga’s GDP in its State of the Climate in the South-West Pacific 2020 assessment.",
+    "chart": {
+      "title": "Household WASH snapshot",
+      "subtitle": "Tonga MICS 2024 · Source: Tonga Statistics Department",
+      "series": [
+        {
+          "label": "Basic drinking water",
+          "value": 99.6,
+          "display": "99.6%"
+        },
+        {
+          "label": "Safely managed drinking water",
+          "value": 19.7,
+          "display": "19.7%"
+        },
+        {
+          "label": "Basic sanitation",
+          "value": 91.0,
+          "display": "91.0%"
+        },
+        {
+          "label": "Handwashing with water & soap",
+          "value": 65.7,
+          "display": "65.7%"
+        }
+      ]
+    }
   }
 }
