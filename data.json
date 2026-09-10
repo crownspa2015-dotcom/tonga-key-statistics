@@ -1,71 +1,100 @@
 {
   "meta": {
-    "country": "Tonga",
     "title": "Tonga — Key Statistics",
-    "subtitle": "Selected headline social, economic and environmental statistics from official Tonga government sources.",
-    "lastUpdated": "2026-09-09"
+    "subtitle": "Official statistics at a glance — simple headline indicators across social, economic and environmental priorities.",
+    "lastUpdated": "10 September 2026"
   },
+  "sources": [
+    "Tonga Statistics Department",
+    "National Reserve Bank of Tonga",
+    "Ministry of Finance",
+    "Ministry of Fisheries",
+    "Department of Climate Change / MEIDECC",
+    "Tonga Strategic Development Framework"
+  ],
   "social": {
     "cards": [
       {
+        "icon": "👥",
         "label": "Population",
         "value": "100,179",
         "period": "30 Nov 2021",
-        "icon": "👥"
+        "source": "Tonga Statistics Department — 2021 Census",
+        "sourceUrl": "https://tongastats.gov.to/census-2/population-census-3/census-story/"
       },
       {
-        "label": "Students enrolled",
-        "value": "36,604",
-        "period": "2024",
-        "icon": "🎓"
+        "icon": "⚥",
+        "label": "Population by sex",
+        "value": "49% / 51%",
+        "period": "Male / female · 2021 Census",
+        "source": "Tonga Statistics Department — 2021 Census",
+        "sourceUrl": "https://tongastats.gov.to/census-2/population-census-3/census-story/"
       },
       {
-        "label": "Life expectancy at birth",
-        "value": "70.0 years",
-        "period": "2018–2020",
-        "icon": "♡"
+        "icon": "🎓",
+        "label": "Primary net attendance",
+        "value": "95.8%",
+        "period": "MICS 2024",
+        "source": "Tonga Statistics Department — MICS 2024",
+        "sourceUrl": "https://tongastats.gov.to/survey/mics-survey/"
       },
       {
-        "label": "Employment-to-population ratio",
-        "value": "44%",
-        "period": "2023",
-        "icon": "💼"
+        "icon": "❤",
+        "label": "Under-5 mortality",
+        "value": "11 / 1,000",
+        "period": "MICS 2024 · preceding 10-year period",
+        "source": "Tonga Statistics Department — MICS 2024",
+        "sourceUrl": "https://tongastats.gov.to/survey/mics-survey/"
       },
       {
+        "icon": "⌂",
         "label": "Multidimensional poverty",
         "value": "24%",
-        "period": "2021",
-        "icon": "◉"
+        "period": "2021 HIES / poverty assessment",
+        "source": "Tonga Statistics Department — Assessing Poverty Report",
+        "sourceUrl": "https://tongastats.gov.to/statistics/social-statistics/poverty-in-tonga/"
       }
     ],
     "chart": {
-      "title": "Student enrolment by level",
-      "subtitle": "Number of students, 2024",
-      "type": "bar",
+      "title": "School net attendance by level",
+      "subtitle": "Adjusted net attendance rate · Tonga MICS 2024 · Source: Tonga Statistics Department",
       "series": [
         {
-          "label": "ECE",
-          "value": 2392
-        },
-        {
           "label": "Primary",
-          "value": 15643
+          "value": 95.8,
+          "display": "95.8%"
         },
         {
-          "label": "Middle",
-          "value": 4544
+          "label": "Lower secondary",
+          "value": 90.7,
+          "display": "90.7%"
         },
         {
-          "label": "Secondary",
-          "value": 11241
+          "label": "Upper secondary",
+          "value": 73.0,
+          "display": "73.0%"
+        }
+      ]
+    },
+    "snapshot": {
+      "title": "Social snapshot",
+      "subtitle": "A quick picture of Tonga’s people and wellbeing.",
+      "lines": [
+        {
+          "head": "100,179 people",
+          "text": "were counted in the 2021 Census."
         },
         {
-          "label": "TVET",
-          "value": 1085
+          "head": "95.8%",
+          "text": "of primary-school-age children attend primary school or higher."
         },
         {
-          "label": "Tertiary",
-          "value": 1699
+          "head": "11 per 1,000",
+          "text": "is the under-5 mortality rate in the 2024 MICS estimate."
+        },
+        {
+          "head": "24%",
+          "text": "of the population was multidimensionally poor in 2021."
         }
       ]
     }
@@ -73,41 +102,50 @@
   "economic": {
     "cards": [
       {
+        "icon": "↗",
         "label": "GDP growth",
         "value": "4.4%",
         "period": "2024/25",
-        "icon": "↗"
+        "source": "Tonga Statistics Department",
+        "sourceUrl": "https://tongastats.gov.to/"
       },
       {
+        "icon": "%",
         "label": "Annual inflation",
         "value": "9.3%",
         "period": "July 2026",
-        "icon": "◎"
+        "source": "Tonga Statistics Department",
+        "sourceUrl": "https://tongastats.gov.to/"
       },
       {
+        "icon": "✈",
         "label": "Visitor arrivals",
         "value": "74,646",
         "period": "2025",
-        "icon": "✈"
+        "source": "Tonga Statistics Department — Annual Migration Report 2025",
+        "sourceUrl": "https://tongastats.gov.to/download/500/annual/12783/migration-bulletin-annual-report-2025"
       },
       {
+        "icon": "$",
         "label": "Remittances",
-        "value": "T$557.8m",
-        "period": "Year ended Oct 2025",
-        "icon": "↙"
+        "value": "T$595.6m",
+        "period": "Year to April 2026",
+        "source": "National Reserve Bank of Tonga",
+        "sourceUrl": "https://www.reservebank.to/index.php/eco-reviews/meu/monthly-economic-update-june-2026"
       },
       {
-        "label": "Trade deficit",
-        "value": "T$714.3m",
-        "period": "2025",
-        "icon": "⇄"
+        "icon": "▣",
+        "label": "Public debt",
+        "value": "T$399.3m",
+        "period": "31 March 2026 · 23.2% of GDP",
+        "source": "Ministry of Finance — Quarterly Debt Bulletin",
+        "sourceUrl": "https://www.finance.gov.to/sites/default/files/2026-05/Quarterly%20Debt%20Bulletin%20March%202026.pdf"
       }
     ],
     "charts": [
       {
         "title": "Visitor arrivals trend",
-        "subtitle": "International visitors, 2019–2025",
-        "type": "line",
+        "subtitle": "Annual visitors · 2019–2025 · Source: Tonga Statistics Department",
         "series": [
           {
             "label": "2019",
@@ -131,7 +169,7 @@
           },
           {
             "label": "2024",
-            "value": 81146
+            "value": 81236
           },
           {
             "label": "2025",
@@ -141,8 +179,7 @@
       },
       {
         "title": "Imports vs exports",
-        "subtitle": "International merchandise trade, 2025",
-        "type": "bar",
+        "subtitle": "2025 merchandise trade · T$ million · Source: Tonga Statistics Department",
         "series": [
           {
             "label": "Imports",
@@ -161,44 +198,46 @@
   "environment": {
     "cards": [
       {
+        "icon": "☀",
         "label": "Renewable electricity generation",
         "value": "27.1%",
         "period": "2023",
-        "icon": "☀"
+        "source": "Ministry of Finance — Budget Statement 2024/25",
+        "sourceUrl": "https://www.finance.gov.to/sites/default/files/2024-07/Budget%20Statement%202024-2025%20English.pdf"
       },
       {
-        "label": "Electricity access",
-        "value": "99%",
-        "period": "2023",
-        "icon": "⚡"
+        "icon": "💧",
+        "label": "Safely managed drinking water",
+        "value": "19.7%",
+        "period": "MICS 2024",
+        "source": "Tonga Statistics Department — MICS 2024",
+        "sourceUrl": "https://tongastats.gov.to/survey/mics-survey/"
       },
       {
+        "icon": "🐟",
         "label": "Special Management Areas",
         "value": "65",
         "period": "FY2023/24",
-        "icon": "🌊"
+        "source": "Ministry of Fisheries — Annual Report FY2023/24",
+        "sourceUrl": "https://www.tongafish.gov.to/images/Fisheries/2025/MoF_Annual-Report-FY2023-24_final_with-amend-11-April-2025.pdf"
       },
       {
-        "label": "Water tanks distributed",
-        "value": "9,000+",
-        "period": "Cumulative programme total",
-        "icon": "💧"
+        "icon": "🌊",
+        "label": "Sea-level rise",
+        "value": "7.3 mm/yr",
+        "period": "Officially reported at COP29 · Nov 2024",
+        "source": "Department of Climate Change / MEIDECC",
+        "sourceUrl": "https://climatechange.gov.to/kingdom-of-tonga-calls-for-immediate-global-climate-action-at-cop29/"
       },
       {
-        "label": "Trees identified",
-        "value": "2.2m+",
-        "period": "Tongatapu pilot census, 2024",
-        "icon": "🌳"
+        "icon": "🌿",
+        "label": "Terrestrial protected areas",
+        "value": "14.54%",
+        "period": "2015 baseline · best verified official national baseline",
+        "source": "Tonga Strategic Development Framework 2015–2025",
+        "sourceUrl": "https://pmo.gov.to/wp-content/uploads/2020/11/TSDF-2015-2025_English.pdf"
       }
     ],
-    "note": "The tree figure is for Tongatapu only, not a national Tonga total. The water-tank figure is a cumulative programme total reported by the Government of Tonga."
-  },
-  "sources": [
-    "Tonga Statistics Department",
-    "Ministry of Education & Training",
-    "National Reserve Bank of Tonga",
-    "Ministry of Finance",
-    "Ministry of Fisheries",
-    "MEIDECC / Climate Change Department"
-  ]
+    "note": "Environment at a glance: renewable power generation reached 27.1% in 2023; safely managed drinking water was 19.7% in MICS 2024; Tonga implemented 65 Special Management Areas in FY2023/24; Tonga officially reported sea-level rise of 7.3 mm per year at COP29; the terrestrial protected-area figure is an older 2015 official baseline and is labelled as such rather than presented as current."
+  }
 }
