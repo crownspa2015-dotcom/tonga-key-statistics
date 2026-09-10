@@ -34,7 +34,7 @@ body{
 /* ---------- HERO ---------- */
 .hero{
   display:grid;
-  grid-template-columns:minmax(0,1.45fr) minmax(320px,.65fr);
+  grid-template-columns:1fr;
   gap:16px;
   margin-bottom:18px;
 }
@@ -598,11 +598,6 @@ async function load(){
                       fill="none" stroke="#087f90" stroke-opacity=".36" stroke-width="3" stroke-linecap="round"/>
               </svg>
             </div>
-          </div>
-          <div class="source-box">
-            <div class="kicker">Official source network</div>
-            <strong>Official & authoritative sources</strong>
-            <div class="source-list">${sourceList(d.sources)}</div>
           </div>
         </section>
 
