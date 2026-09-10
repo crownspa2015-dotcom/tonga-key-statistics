@@ -493,6 +493,19 @@ body{
   .hbar-value{text-align:left}
 }
 
+
+.visual-source{
+  font-size:11px;
+  color:#4e6b93;
+  margin-top:-4px;
+  margin-bottom:12px;
+}
+.visual-source a{
+  color:#456fa6;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
 </style>
 </head>
 <body>
@@ -590,6 +603,7 @@ function horizontalBarVisual(chart){
     <div class="visual">
       <h3>${esc(chart.title)}</h3>
       <div class="visual-sub">${esc(chart.subtitle)}</div>
+      ${chart.sourceUrl ? `<div class="visual-source">Source: <a href="${esc(chart.sourceUrl)}" target="_blank" rel="noopener">${esc(chart.source || "Source")}</a></div>` : ""}
       <div class="hbars">
         ${chart.series.map(item=>`
           <div class="hbar-row">

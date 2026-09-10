@@ -57,7 +57,7 @@
     ],
     "chart": {
       "title": "School net attendance by level",
-      "subtitle": "Adjusted net attendance rate · Tonga MICS 2024 · Source: Tonga Statistics Department",
+      "subtitle": "Adjusted net attendance rate · Tonga MICS 2024",
       "series": [
         {
           "label": "Primary",
@@ -74,7 +74,9 @@
           "value": 73.0,
           "display": "73.0%"
         }
-      ]
+      ],
+      "source": "Tonga Statistics Department — MICS 2024",
+      "sourceUrl": "https://tongastats.gov.to/survey/mics-survey/"
     },
     "snapshot": {
       "title": "Social snapshot",
